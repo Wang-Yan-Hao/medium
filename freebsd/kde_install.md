@@ -4,9 +4,9 @@
 1. `pkg install xorg` 安裝 Xorg
 2. `pw groupmod video -m [user]` 把預計使用桌面的使用者設成 video 群組，使用 `id -Gn [user]` 來查看 user 屬於的群組
 3. `pciconf -lv|grep -B4 VGA` 查看電腦使用的顯卡，我是在 VMware 上安裝的，所以會顯示 Virtual Machine Communication Interface
-4. `pkg install xf86-video-vmware` 根據顯卡，安裝對應的驅動程式，如果是在實體顯卡上，則需要在 Xorg 的設定檔 (/usr/local/etc/X11/xorg.conf.d/) 加入驅動路徑，詳情請看手冊，虛擬機不需要驅動
-5. `pkg install kde5` 安裝 KDE
-6. `sysrc dbus_enable=”YES”` 開機時自動啟動 DBus
+4. `pkg install xf86-video-vmware` 根據顯卡，安裝對應的驅動程式，如果是在實體顯卡上，則需要在 Xorg 的設定檔 (/usr/local/etc/X11/xorg.conf.d/) 加入驅動路徑，詳情請看手冊，這個則是 Vmware 的驅動
+6. `pkg install kde5` 安裝 KDE
+7. `sysrc dbus_enable=”YES”` 開機時自動啟動 DBus
     ![image](https://hackmd.io/_uploads/S1pSC-cFa.png)
     
     from [wiki](https://zh.wikipedia.org/zh-tw/D-Bus)
